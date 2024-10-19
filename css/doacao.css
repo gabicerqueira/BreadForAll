@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+#header {
+    display: flex;
+    justify-content: right;
+}
+
+#header img {
+    width: 60px;
+    margin: 50px 0;
+    transition: transform 0.3s ease;
+}
+
+#header img:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    margin: 0 100px;
+}
+
+main {
+    margin: 40px 0 80px 0;
+}
+
+/* DOAÇÃO */
+
+#doacao .doacao {
+    border-left: 4px solid #9300f9;
+    padding: 5px 0;
+}
+
+#doacao .titulo {
+    font: 4.5vh 'PoppinsSemiBold', sans-serif;
+}
+
+#doacao .subtitulo {
+    font: 2.3vh 'PoppinsLight', sans-serif;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+#doacao .texto-doacao,
+.texto-alimentos {
+    margin-left: 20px;
+    padding: 5px 0;
+}
+
+/* ALIMENTOS NÃO-PERECIVEIS */
+
+#nao-pereciveis,
+#infantis,
+#bebidas,
+#frescos {
+    margin-top: 100px;
+}
+
+#nao-pereciveis .doacao {
+    border-left: 4px solid #DC0073;
+}
+
+.titulo-alimentos {
+    font: 3.5vh 'PoppinsSemiBold', sans-serif;
+}
+
+.subtitulo-alimentos {
+    font: 2.2vh 'PoppinsLight', sans-serif;
+    text-align: justify;
+}
+
+.img-texto {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.img-texto img {
+    width: 18vw;
+}
+
+.columm-botao {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.columm-botao button {
+    width: 10vw;
+    padding: 5px 0;
+    background-color: black;
+    color: white;
+    font: 18px 'PoppinsSemiBold', sans-serif;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 3px 3px 4px #00000031;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#nao-pereciveis .columm-botao button:hover {
+    background-color: #DC0073;
+}
+
+#infantis .columm-botao button:hover {
+    background-color: #008bf8;
+}
+
+#bebidas .columm-botao button:hover {
+    background-color: #f5b700;
+}
+
+#frescos .columm-botao button:hover {
+    background-color: #04e762;
+}
+
+.columm-botao button:hover {
+    transform: scale(1.1);
+}
+
+
+/* ALIMENTOS INFANTIS */
+#infantis .doacao {
+    border-left: 4px solid #008bf8;
+}
+
+/* BEBIDAS */
+#bebidas .doacao {
+    border-left: 4px solid #f5b700;
+}
+
+/* ALIMENTOS FRESCOS */
+#frescos .doacao {
+    border-left: 4px solid #04e762;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #04e762;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    width: 30%;
+}
+
+.div-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.modal-img {
+    width: 65px;
+    height: 65px;
+}
+
+.modal-texto {
+    font: 18px 'PoppinsBold', sans-serif;
+    margin: 0 18px;
+    text-align: center;
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 1300px) {
+    .img-texto {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-texto img {
+        width: 35vw;
+    }
+
+    .columm-botao button {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0 80px;
+    }
+
+    #doacao .titulo {
+        font: 4vh 'PoppinsSemiBold', sans-serif;
+    }
+
+    #doacao .subtitulo {
+        font: 2.2vh 'PoppinsLight', sans-serif;
+    }
+
+    .img-texto {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-texto img {
+        width: 60vw;
+    }
+
+    .columm-botao {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .columm-botao button {
+        width: 25vw;
+    }
+
+    #doacao .texto-doacao,
+    .texto-alimentos {
+        margin-left: 28px;
+        padding: 25px 0;
+    }
+
+    .modal-content {
+        background-color: #04e762;
+        color: white;
+        padding: 18px;
+        text-align: center;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .close {
+        margin-left: auto;
+        font-size: 25px;
+    }
+
+    .div-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .modal-texto {
+        font: 16px 'PoppinsBold', sans-serif;
+        margin: 10px;
+    }
+
+    .modal-img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #header img {
+        width: 40px;
+        margin: 50px 0;
+    }
+
+    .container {
+        margin: 0 50px;
+    }
+
+    #doacao .doacao {
+        border-top: 4px solid #9300f9;
+        border-left: 0;
+        padding: 5px 0;
+    }
+
+    #doacao .texto-doacao,
+    .texto-alimentos {
+        margin-left: 0;
+        padding: 25px 0;
+        text-align: center;
+    }
+
+    #doacao .titulo {
+        font: 3.5vh 'PoppinsSemiBold', sans-serif;
+    }
+
+    #doacao .subtitulo,
+    .subtitulo-alimentos {
+        font: 2vh 'PoppinsLight', sans-serif;
+    }
+
+    /* ALIMENTOS NÃO-PERECIVEIS */
+
+    #nao-pereciveis .doacao {
+        border-top: 4px solid #DC0073;
+        border-left: 0;
+    }
+
+    .titulo-alimentos {
+        font: 3vh 'PoppinsSemiBold', sans-serif;
+    }
+
+    /* ALIMENTOS INFANTIS */
+    #infantis .doacao {
+        border-top: 4px solid #008bf8;
+        border-left: 0;
+    }
+
+    /* BEBIDAS */
+    #bebidas .doacao {
+        border-top: 4px solid #f5b700;
+        border-left: 0;
+    }
+
+    /* ALIMENTOS FRESCOS */
+    #frescos .doacao {
+        border-top: 4px solid #04e762;
+        border-left: 0;
+    }
+
+    .columm-botao button {
+        width: 35vw;
+    }
+}

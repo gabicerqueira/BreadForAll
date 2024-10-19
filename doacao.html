@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação de alimentos - Bread for All</title>
+    <link rel="stylesheet" href="css/doacao.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+
+<body>
+    <header>
+        <section id="header">
+            <div class="container">
+                <a href="index.html"><img src="img/logo.png" alt="logo pão"></a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="doacao">
+            <div class="container">
+                <div class="doacao">
+                    <div class="texto-doacao">
+                        <p class="titulo">Doação de Alimentos</p>
+                        <p class="subtitulo">A Bread For All expressa sua profunda gratidão pelo seu gesto nobre! A
+                            doação de alimentos não é apenas um ato de bondade, mas um compromisso com o bem-estar da
+                            comunidade, que vai muito além de suprir necessidades nutricionais básicas. Esse simples ato
+                            de generosidade oferece uma oportunidade real de trazer esperança e melhorar
+                            significativamente o futuro daqueles que mais precisam de ajuda, transformando vidas e
+                            construindo um mundo mais justo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nao-pereciveis">
+            <div class="container">
+                <div class="doacao">
+                    <div class="texto-alimentos">
+                        <p class="titulo-alimentos">Alimentos não perecíveis</p>
+                        <div class="img-texto">
+                            <img src="img/nao-pereciveis.png" alt="refeição">
+                            <div class="columm-botao">
+                                <p class="subtitulo-alimentos">Os alimentos não perecíveis são essenciais para garantir
+                                    que todos tenham acesso a refeições nutritivas, independentemente das condições de
+                                    armazenamento. Produtos como arroz, feijão, macarrão, farinha de trigo, cereais como
+                                    aveia e milho, além de conservas como atum, sardinha, milho e ervilha, são
+                                    fundamentais. Outros itens importantes incluem leite em pó, que tem longa duração, e
+                                    óleo vegetal, essencial na preparação de diversos pratos, ajudando a compor
+                                    refeições ricas e balanceadas para muitas famílias.</p>
+                                <button id="doar">Doar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="infantis" class="fade-in">
+            <div class="container">
+                <div class="doacao">
+                    <div class="texto-alimentos">
+                        <p class="titulo-alimentos">Alimentos infantis</p>
+                        <div class="img-texto">
+                            <img src="img/infantis.png" alt="refeição">
+                            <div class="columm-botao">
+                                <p class="subtitulo-alimentos">Os alimentos infantis são essenciais para garantir o
+                                    crescimento saudável das nossas crianças. Papinhas prontas de frutas e vegetais são
+                                    opções práticas e nutritivas, enquanto cereais infantis fortificados ajudam a suprir
+                                    as necessidades nutricionais diárias dos pequenos. O leite em pó infantil, por ser
+                                    enriquecido com nutrientes importantes, é uma excelente escolha, assim como
+                                    biscoitos e bolachas específicas para bebês, que podem servir como lanches saudáveis
+                                    e deliciosos.</p>
+                                <button id="doar">Doar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bebidas" class="fade-in">
+            <div class="container">
+                <div class="doacao">
+                    <div class="texto-alimentos">
+                        <p class="titulo-alimentos">Bebidas</p>
+                        <div class="img-texto">
+                            <img src="img/bebidas.png" alt="refeição">
+                            <div class="columm-botao">
+                                <p class="subtitulo-alimentos">Além dos alimentos, as bebidas também são fundamentais
+                                    para uma alimentação completa. Água mineral, sucos naturais ou industrializados,
+                                    leite, chá e café são produtos que, além de hidratar, proporcionam energia e
+                                    complementam as refeições diárias. Em alguns casos, até mesmo refrigerantes podem
+                                    trazer um pouco de alegria e momentos de descontração para as famílias em situações
+                                    de vulnerabilidade.</p>
+                                <button id="doar">Doar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="frescos" class="fade-in">
+            <div class="container">
+                <div class="doacao">
+                    <div class="texto-alimentos">
+                        <p class="titulo-alimentos">Alimentos frescos</p>
+                        <div class="img-texto">
+                            <img src="img/frescos.png" alt="refeição">
+                            <div class="columm-botao">
+                                <p class="subtitulo-alimentos">Os alimentos frescos são essenciais para manter uma dieta
+                                    rica em vitaminas e minerais, essenciais para a saúde do corpo. Frutas como maçãs,
+                                    bananas, laranjas e morangos oferecem nutrientes importantes, além de serem
+                                    deliciosas. Legumes como alface, cenouras, tomates e brócolis são fundamentais para
+                                    complementar uma alimentação balanceada, proporcionando fibras e antioxidantes
+                                    naturais. Sua doação de alimentos frescos pode trazer mais saúde e vitalidade para
+                                    muitas famílias.</p>
+                                <button id="doar">Doar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="div-modal">
+                    <img src="img/check.png" alt="Sucesso" class="modal-img">
+                    <p class="modal-texto">Sua doação foi enviada com sucesso! Muito obrigado por fazer parte desse gesto nobre.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll("#doar").forEach(button => {
+            button.addEventListener("click", function () {
+                document.getElementById("modal").style.display = "flex";
+            });
+        });
+
+        document.querySelector(".close").addEventListener("click", function () {
+            document.getElementById("modal").style.display = "none";
+        });
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("modal")) {
+                document.getElementById("modal").style.display = "none";
+            }
+        };
+
+        function animateOnScroll() {
+            const elementos = document.querySelectorAll('.fade-in');
+
+            elementos.forEach(elemento => {
+                const posicaoElemento = elemento.getBoundingClientRect().top;
+                const tamanhoTela = window.innerHeight;
+
+                if (posicaoElemento < tamanhoTela - 50) {
+                    elemento.classList.add('aparecer');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+
+</html>

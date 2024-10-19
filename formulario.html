@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja um Voluntário - Bread for All</title>
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+
+<body>
+    <header>
+        <section id="header">
+            <div class="container">
+                <a href="index.html"><img src="img/logo.png" alt="logo pão"></a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="voluntarios">
+            <div class="container">
+                <div class="voluntarios">
+                    <div class="texto-voluntarios">
+                        <p class="titulo">Que tal fazer parte da equipe de voluntários?</p>
+                        <p class="subtitulo">
+                            Junte-se a nós e ajude a transformar vidas! Como voluntário no nosso posto de doação de
+                            alimentos, você estará contribuindo diretamente para garantir que alimentos cheguem à mesa
+                            de famílias em necessidade. Sua ajuda é essencial para o sucesso das nossas ações, seja
+                            organizando doações, distribuindo alimentos ou oferecendo suporte na logística.
+                            <span>Venha fazer a diferença na sua comunidade!</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form">
+            <img src="img/voluntarios.png" alt="Pessoas conversando">
+            <form id="voluntarioForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="idade">Idade (+18):</label>
+                    <input type="number" id="idade" name="idade" min="18" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+                <button type="submit" id="enviar">Enviar</button>
+            </form>
+        </section>
+
+        <div id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="div-modal">
+                    <img src="img/check.png" alt="Sucesso" class="modal-img">
+                    <p class="modal-texto">Seu cadastro foi enviado! Entraremos em contato por email com mais informações.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("voluntarioForm");
+            const modal = document.getElementById("modal");
+            const closeModalButton = document.querySelector(".close");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const isFormValid = Array.from(form.elements).every(input => input.checkValidity());
+
+                if (isFormValid) {
+                    modal.style.display = "flex";
+                }
+            });
+
+            closeModalButton.addEventListener("click", function () {
+                modal.style.display = "none"; 
+            });
+
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+    </script>
+</body>
+
+</html>

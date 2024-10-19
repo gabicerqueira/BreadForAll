@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+#header {
+    display: flex;
+    justify-content: right;
+}
+
+#header img {
+    width: 60px;
+    margin: 50px 0;
+    transition: transform 0.3s ease;
+}
+
+#header img:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    margin: 0 100px;
+}
+
+main {
+    margin: 40px 0 80px 0;
+}
+
+/* VOLUNTARIOS */
+
+#voluntarios .voluntarios {
+    border-left: 4px solid #008bf8;
+    padding: 5px 0;
+}
+
+#voluntarios .titulo {
+    font: 4.5vh 'PoppinsSemiBold', sans-serif;
+}
+
+#voluntarios .subtitulo {
+    font: 2.3vh 'PoppinsLight', sans-serif;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+#voluntarios .texto-voluntarios{
+    margin-left: 20px;
+    padding: 5px 0;
+}
+
+/* FORMULARIO */
+
+#form {
+    display: flex;
+    justify-content: center;
+    margin: 0 100px;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    max-width: 900px; /* Maior largura para inputs maiores */
+    margin: 20px 0;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+label {
+    width: 15%;
+    text-align: right;
+    margin-right: 20px;
+    font-family: 'PoppinsSemiBold', sans-serif;
+}
+
+input {
+    width: 80%; /* Aumenta a largura dos inputs */
+    padding: 3px;
+    font-family: 'PoppinsLight', sans-serif;
+    border: none;
+    border-bottom: 4px solid transparent;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Bordas coloridas */
+#nome {
+    border-bottom: 3px solid #04e762; /* Verde */
+}
+
+#idade {
+    border-bottom: 3px solid #f5b700; /* Amarelo */
+}
+
+#telefone {
+    border-bottom: 3px solid #ff57b2; /* Rosa */
+}
+
+#email {
+    border-bottom: 3px solid #008bf8; /* Azul */
+}
+
+#cep {
+    border-bottom: 3px solid #9300f9; /* Roxo */
+}
+
+button {
+    width: 40%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    font-family: 'PoppinsSemiBold', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    box-shadow: 3px 3px 4px #00000031;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #7300c1;
+    transform: scale(1.05);
+}
+
+#form img{
+    width: 30%;
+    height: 30%;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #04e762;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    width: 30%;
+}
+
+.div-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.modal-img {
+    width: 65px;
+    height: 65px;
+}
+
+.modal-texto {
+    font: 18px 'PoppinsBold', sans-serif;
+    margin: 0 18px;
+    text-align: center;
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    #form{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form img{
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0 80px;
+    }
+
+    #voluntarios .titulo {
+        font: 4vh 'PoppinsSemiBold', sans-serif;
+    }
+
+    #voluntarios .subtitulo {
+        font: 2.2vh 'PoppinsLight', sans-serif;
+    }
+
+    #form{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form img{
+        width: 70%;
+        height: 70%;
+    }
+
+    form {
+        width: 70%;
+        max-width: 900px; /* Maior largura para inputs maiores */
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .modal-content {
+        background-color: #04e762;
+        color: white;
+        padding: 18px;
+        text-align: center;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .close {
+        margin-left: auto;
+        font-size: 25px;
+    }
+
+    .div-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .modal-texto {
+        font: 16px 'PoppinsBold', sans-serif;
+        margin: 10px;
+    }
+
+    .modal-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    button {
+        width: 35vw;
+    }
+
+    input{
+        width: 70%;
+    }
+
+    label{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #header img {
+        width: 40px;
+        margin: 50px 0;
+    }
+
+    .container {
+        margin: 0 50px;
+    }
+
+    #voluntarios .voluntarios {
+        border-top: 4px solid #008bf8;
+        border-left: 0;
+        padding: 5px 0;
+    }
+
+    #voluntarios .texto-voluntarios{
+        margin-left: 0;
+        padding: 25px 0;
+        text-align: center;
+    }
+
+    #voluntarios .titulo {
+        font: 2.8vh 'PoppinsSemiBold', sans-serif;
+    }
+
+    #voluntarios .subtitulo{
+        font: 2vh 'PoppinsLight', sans-serif;
+    }
+}
