@@ -80,7 +80,7 @@ main {
 
 form {
     width: 100%;
-    max-width: 900px; /* Maior largura para inputs maiores */
+    max-width: 900px;
     margin: 20px 0;
     text-align: center;
 }
@@ -101,7 +101,7 @@ label {
 }
 
 input {
-    width: 80%; /* Aumenta a largura dos inputs */
+    width: 80%; 
     padding: 3px;
     font-family: 'PoppinsLight', sans-serif;
     border: none;
@@ -116,23 +116,23 @@ input:focus {
 
 /* Bordas coloridas */
 #nome {
-    border-bottom: 3px solid #04e762; /* Verde */
+    border-bottom: 3px solid #04e762;
 }
 
 #idade {
-    border-bottom: 3px solid #f5b700; /* Amarelo */
+    border-bottom: 3px solid #f5b700;
 }
 
 #telefone {
-    border-bottom: 3px solid #ff57b2; /* Rosa */
+    border-bottom: 3px solid #ff57b2;
 }
 
 #email {
-    border-bottom: 3px solid #008bf8; /* Azul */
+    border-bottom: 3px solid #008bf8;
 }
 
 #cep {
-    border-bottom: 3px solid #9300f9; /* Roxo */
+    border-bottom: 3px solid #9300f9;
 }
 
 button {
@@ -248,7 +248,7 @@ button:hover {
 
     form {
         width: 70%;
-        max-width: 900px; /* Maior largura para inputs maiores */
+        max-width: 900px; 
         margin: 20px 0;
         text-align: center;
     }
